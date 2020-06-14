@@ -21,7 +21,7 @@ const Styles = styled.div`
 export const NavigationBar = () => (
   <Styles>
     <Navbar expand="lg">
-      <Navbar.Brand href="/">coronacare.ai</Navbar.Brand>
+      <Navbar.Brand href={process.env.PUBLIC_URL + "/"}>coronacare.ai</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav"/>
       {/* Search Bar */}
       {/* <Form className="form-center">
@@ -29,9 +29,9 @@ export const NavigationBar = () => (
       </Form> */}
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item> 
-          <Nav.Item><Nav.Link href="/about">About the Product</Nav.Link></Nav.Item>
-          <Nav.Item><Nav.Link href="/contact">Contact Us</Nav.Link></Nav.Item>
+          <Nav.Item><Nav.Link href= {process.env.PUBLIC_URL + "/"}>Home</Nav.Link></Nav.Item> 
+          <Nav.Item><Nav.Link href={process.env.PUBLIC_URL + "/about"}>About the Product</Nav.Link></Nav.Item>
+          <Nav.Item><Nav.Link href={process.env.PUBLIC_URL + "/contact"}>Contact Us</Nav.Link></Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
