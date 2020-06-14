@@ -1,7 +1,7 @@
 import React from 'react';
 import NavItem from './NavItem.js';
 import styled from "styled-components";
-import { BrowserRouter as Router, Route, Link, withRouter } from "react-router-dom";
+import { HashRouter as Router, Route, Link, withRouter } from "react-router-dom";
 /* This defines the actual bar going down the screen */
 const StyledSideNav = styled.div`
   position: fixed;     /* Fixed Sidebar (stay in place on scroll and position relative to viewport) */
@@ -21,19 +21,19 @@ class SideNav extends React.Component {
           activePath: props.location.pathname,
           items: [
             {
-              path: process.env.PUBLIC_URL + '/', /* path is used as id to check which NavItem is active basically */
+              path: '/', /* path is used as id to check which NavItem is active basically */
               name: 'Home',
               css: 'fa fa-fw fa-home',
               key: 1 /* Key is required, else console throws error. Does this please you Mr. Browser?! */
             },
             {
-              path: process.env.PUBLIC_URL + '/about',
+              path: '/about',
               name: 'About the Product',
               css: 'fa fa-fw fa-cog',
               key: 2
             },
             {
-              path: process.env.PUBLIC_URL + '/contact',
+              path: '/contact',
               name: 'Contact Us',
               css: 'fas fa-address-book',
               key: 3
