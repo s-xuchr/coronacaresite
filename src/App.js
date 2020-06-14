@@ -19,6 +19,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={NoMatch} />
+            <Route path="/bot" render={() => window.location = 'm.me/coronacareai'}/>
           </Switch>
       </Router>
     </React.Fragment>

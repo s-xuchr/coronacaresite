@@ -13,7 +13,7 @@ const GridWrapper = styled.div`
 const element = <w style={{ color: 'green', fontSize: '110%', fontFamily: 'Verdana' }}>coronacare.ai</w>
 export const About = () => (
     <div className="padding">
-        <h1 style={{fontFamily: 'Verdana', backgroundColor: 'lightgray'}}>About</h1>
+        <h1 style={{fontFamily: 'Verdana'}}>About</h1>
         <p style={{fontFamily: 'Verdana'}}> {element} is a Facebook Messenger chatbot tailored specifically for those in need of assistance during the COVID-19 pandemic. </p> 
         <p style={{fontFamily: 'Verdana'}}> Ask it questions about COVID-19 to get the latest news and data about the pandemic or simply prompt it for ways to spend your time while in quarantine. </p>
         <p style={{fontFamily: 'Verdana'}}> Using the bot, you can: </p>

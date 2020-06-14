@@ -1,5 +1,6 @@
 import React from 'react';
 import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
+import { Switch, Route, Link } from 'react-router-dom';
 import styled from 'styled-components';
 const Styles = styled.div`
   .navbar { background-color: #222; }
@@ -21,7 +22,7 @@ const Styles = styled.div`
 export const NavigationBar = () => (
   <Styles>
     <Navbar expand="lg">
-      <Navbar.Brand href ="/">coronacare.ai</Navbar.Brand>
+      <Navbar.Brand as={Link} to="/">coronacare.ai</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav"/>
       {/* Search Bar */}
       {/* <Form className="form-center">
@@ -29,9 +30,9 @@ export const NavigationBar = () => (
       </Form> */}
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Item><Nav.Link href= "/">Home</Nav.Link></Nav.Item> 
-          <Nav.Item><Nav.Link href="/about">About the Product</Nav.Link></Nav.Item>
-          <Nav.Item><Nav.Link href="/contact">Contact Us</Nav.Link></Nav.Item>
+          <Nav.Item><Nav.Link as={Link} to="/">Home</Nav.Link></Nav.Item> 
+          <Nav.Item><Nav.Link as={Link} to="/about">About the Product</Nav.Link></Nav.Item>
+          <Nav.Item><Nav.Link as={Link} to="/contact">Contact Us</Nav.Link></Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
